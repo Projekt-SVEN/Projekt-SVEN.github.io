@@ -1,6 +1,8 @@
 /* Grunddesign */
 body {
-    background-color: #26de81; /*Reptile Green*/
+    background: url("../img/green.jpg") #3cc310cc;
+    background-size: cover;
+    background-blend-mode: overlay;
     font-size: larger;
     font-family: 'Lora', serif;
     color: #0E0E0E;
@@ -24,7 +26,7 @@ header > img {
 
 
 article {
-    background-color: floralwhite;
+    /*background-color: floralwhite;*/
     margin-left: 1%;
     margin-right: 1%;
     padding: 16px;
@@ -40,6 +42,10 @@ article {
 footer {
     width: 100%;
     bottom: 0;
+}
+
+article a:link, article a:visited {
+    color: #0E0E0E;
 }
 
 /* Sticky Navbar */

@@ -1,10 +1,11 @@
 body {
-    background-image: url("../img/green.jpg");
+    background: url("../img/green.jpg") #3cc310cc;
     background-size: cover;
+    background-blend-mode: overlay;
 }
 
 article {
-    background-color: #62f38891;
+    background-color: #00000000;
 }
 
 .article_mitte {
