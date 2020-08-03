@@ -1,6 +1,32 @@
-/* Quelle: https://www.webcodegeeks.com/html5/html5-navigation-bar-example/ */
+﻿/* hover dropdown menus */
+@media only screen and (max-width: 991px) {
+    .navbar-hover .show > .dropdown-toggle::after{
+        transform: rotate(-90deg);
+    }
+}
+@media only screen and (min-width: 992px) {
+    .navbar-hover .collapse ul li{position:relative;}
+    .navbar-hover .collapse ul li:hover> ul{display:block}
+    .navbar-hover .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+    .navbar-hover .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+    /*.navbar-hover .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}*/
+}
+
+.dropdown-menu{
+		background-color: #26a65b;
+}
+
+.nav-link{
+	font-size:24px;
+}
+
+nav{
+	background-color: #26a65b;
+}
+
+/*
 nav {
-    background-color: #26a65b; /*Eucalyptus*/
+    background-color: #26a65b; /*Eucalyptus
     border: 1px solid #0E0E0E;
     display: block;
     margin: 0;
@@ -31,7 +57,7 @@ nav > ul > li > a {
 nav li > ul{
     display : none;
     margin-top:1px;
-    background-color: #26a65b; /*Eucalyptus*/
+    background-color: #26a65b; /*Eucalyptus
 
 }
 
@@ -66,3 +92,4 @@ nav li > ul > li:hover > ul  {
     margin-left:100%;
     margin-top:-3em;
 }
+*/
