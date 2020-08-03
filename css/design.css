@@ -1,8 +1,9 @@
 /* Grunddesign */
 body {
-    background: url("../img/green.jpg") #3cc310cc;
+    background: url("../img/green_blur.jpg") #3cc310cc;
     background-size: cover;
     background-blend-mode: overlay;
+    /*backdrop-filter: blur(20px); Damit ist Nav-bar nicht mehr sticky*/
     font-size: larger;
     font-family: 'Lora', serif;
     color: #0E0E0E;
@@ -20,8 +21,8 @@ header > span {
 }
 
 header > img {
-    height: 100px;
-    margin-bottom: 15px;
+    height: 110px;
+    margin-bottom: 35px;
 }
 
 
@@ -77,6 +78,10 @@ article a:link, article a:visited {
 .personInfoBox > img {
     border-radius: 50%;
     float: left;
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    object-position: top center;
 }
 
 .personInfoText {
