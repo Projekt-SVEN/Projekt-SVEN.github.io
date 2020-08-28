@@ -40,6 +40,11 @@ article {
     margin: 0 auto;
 }
 
+.article_mitte img
+{
+    max-width: inherit;
+}
+
 footer {
     width: 100%;
     bottom: 0;

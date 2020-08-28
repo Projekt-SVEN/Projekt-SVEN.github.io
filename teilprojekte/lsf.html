@@ -13,7 +13,13 @@
 
         <article>
             <div class="article_mitte">
-                
+                Um die Heizung optimal anzusteuern und f&uuml;r die Studenten eine optimale Lernumgebung zu schaffen, ist es wichtig, die R&auml;ume entsprechend des Stundenplans vorzuheizen und die Solltemperatur rechtzeitig wieder zu senken, wenn der Raum sp&auml;ter nicht mehr genutzt wird. Die erforderlichen Informationen liegen f&uuml;r die Hochschule bereits in digitaler Form im LSF vor. Dieses verf&uuml;gt eigentlich auch &uuml;ber Schnittstellen um diese Daten auszulesen, jedoch sind diese aus den Netzen, in denen wir arbeiten, leider nicht erreichbar. Daher werden die notwendigen Daten uns nach Absprache mit dem Verantwortlichen der Hochschule als Textdatei auf einem hochschulinternen Webserver bereitgestellt. Diese Datei wird t&auml;glich gegen 3 Uhr morgens neu generiert, um ihre Aktualit&auml;t zu gew&auml;hrleisten. Diese Datei enth&auml;lt f&uuml;r jede Veranstaltung: Veranstaltungsnummer, Name, Startdatum, Enddatum, Vorlesungsbeginn, Vorlesungsende, Wochentag, Turnus und den Raum. Jede Zeile der Datei entspricht einer Vorlesung und die einzelnen Werte sind durch senkrechte Linien getrennt.
+<br/><br/>
+<img src="LSF-Struktogramm.png">
+<br/><br/>
+Diese Datei wird jeden Morgen um 3:15 durch ein C#-Programm eingelesen, welches aus FHEM aus gestartet wird. Dieses Liest alle Veranstalltungen ein und generiert daraus die Belegung der R&auml;ume. Danach wird f&uuml;r jeden Raum ein Eintrag im Heizplan erstellt, in welchem dann auch Zeiten zum Vorheitzen, Abk&uuml;hlen und &uuml;berbr&uuml;cken von Pausen ber&uuml;cksichtigt sind. Zus&auml;tzlich wird noch eine zweite Datei mit den Pausenzeiten und den Zeiten der Belegung der R&auml;ume generiert.
+<br/><br/>
+Anzumerken ist, dass Veranstaltungen, die nur 14-t&auml;gig stattfinden, aktuell trotzdem als w&ouml;chentlich angesehen werden, da es mit den aktuellen Daten nicht m&ouml;glich ist den Turnus festzustellen und eine Anforderung zus&auml;tzlicher Daten durch die Corona-Situation w&auml;hrend der Entwicklung erschwert wurde. Zudem werden Veranstaltungen ignoriert, die kein Beginn festgelegt haben, da diese ohne weitere Informationen ebenfalls nicht verarbeitet werden k&ouml;nnen.
             </div>
         </article>
 
